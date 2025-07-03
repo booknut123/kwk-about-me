@@ -1,0 +1,185 @@
+:root {
+    --jet: #2e2e2e;
+    --mint: #a8d5ba;
+    --sky: #bfd7ea;
+    --lavender: #d6cdea;
+    --accent: #7eb09b;
+    --bg: #f7f9fa;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--bg);
+    color: var(--jet);
+    line-height: 1.6;
+    font-size: 115%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent);
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.welcome {
+    position: relative;
+    padding: 6rem 1rem;
+    color: var(--jet);
+    text-align: center;
+}
+
+.welcome::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('images/santorini_landscape.jpg') center/cover no-repeat;
+    opacity: 0.25;
+    z-index: 0;
+}
+
+.welcome h1, .welcome p {
+    position: relative;
+}
+
+.nav {
+    background: white;
+    border-bottom: 2px solid var(--accent);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+}
+
+.nav a:hover {
+    color: var(--jet);
+    border-bottom: 2px solid var(--accent);
+}
+
+.section {
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-img {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.bio {
+    flex: 1;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    align-items: start;
+}
+
+.grid-item {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    padding-bottom: 1%;
+}
+
+.grid-item:hover {
+    transform: scale(1.02);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card-title {
+    background: none;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.card-title h3 {
+    margin: 0;
+}
+
+.card-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.grid-item.expanded .card-content {
+  max-height: 500px;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.grid-item.expanded .arrow {
+  transform: rotate(180deg);
+}
+
+/* .link-card {
+  text-decoration: none;
+  color: inherit;
+}
+.link-card .card-title {
+  cursor: pointer;
+}
+.link-card .arrow {
+  font-size: 1rem;
+} */
+
+
+
+
+.email-link {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.email-link:hover {
+    background: var(--jet);
+}
