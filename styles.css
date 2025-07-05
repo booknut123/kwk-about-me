@@ -161,11 +161,7 @@ button {
 }
 .link-card .arrow {
   font-size: 1rem;
-} */
-
-.coding {
-    color: var(--jet);
-}
+} *
 
 /* BASIS OF TIMELINE CODE IS FROM https://www.w3schools.com/howto/howto_css_timeline.asp
     MOST OF THE CODE IS MODIFIED TO PUT TIMELINE EVENTS ON ONE SIDE ONLY
